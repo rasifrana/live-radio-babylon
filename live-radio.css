@@ -86,6 +86,9 @@ content: "\f04b";
     /* position: relative; */
     z-index: 2;
     font-size: 50px;
+    -webkit-box-shadow: 10px 3px 184px 22px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 3px 184px 22px rgba(0,0,0,0.75);
+    box-shadow: 10px 3px 184px 22px rgba(0,0,0,0.75);
 }
 
 .radioco-playButton:active {
