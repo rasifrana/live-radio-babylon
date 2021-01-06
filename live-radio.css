@@ -19,8 +19,11 @@ body {
 
 /* logo */
 .logo {
-    width: 100%;
+    width: 98%;
     height: 3rem;
+    background-color: #77c08b;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
 }
 
 /* Presenter top Image */
