@@ -13,7 +13,8 @@ body {
 
 .player-container {
     max-width: 420px;
-    background-color:  #6BAD7C;
+    background-color:  #bbdfc5;
+    border-radius: 7px;
 }
 
 /* logo */
@@ -36,10 +37,24 @@ body {
     text-align: center;
 }
 
+.presenter-content p {
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+.presenter-content a {
+    display: block;
+    margin-bottom: 0.3rem;
+    text-decoration: none;
+    font-weight: 800;
+    color: #000;
+}
+
 .radio-content {
     text-align: center;
     background-color: #fff;
-    height: 180px;
+    height: 200px;
+    border-radius: 7px;
     position: relative;
     border-top-left-radius:60px ;
     border-top-right-radius:60px ;
@@ -71,7 +86,7 @@ content: "\f04b";
 
 .radioco-playButton {
     color: #fff;
-    background-color:  #6BAD7C;
+    background-color:  #bbdfc5;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -80,7 +95,7 @@ content: "\f04b";
     height: 6rem;
     position: absolute;
     left: 50%;
-    top: 35%;
+    top: 45%;
     transform: translateX(-50%);
     text-align: center;
     /* position: relative; */
@@ -98,13 +113,16 @@ content: "\f04b";
 .radioco-playButton-playing {
     font-family: "controls";
     /* position: absolute; */
-   margin-left: 7px;
+   margin-left: 11px;
+   margin-top: 3px;
 }
 
 
 .radioco-playButton-paused {
     font-family: "controls";
     /* position: absolute; */
+    
+   margin-top: 5px;
 }
 
 .radioco-elapsedTime {
@@ -115,6 +133,52 @@ content: "\f04b";
     top: 10%;
     margin-bottom: 2rem;
     display: block;
+}
+
+.radioco-information span {
+    display: block;
+}
+
+input[type="range"] {
+    background: rgba(192, 187, 187, 0.3);
+    width: 200px;
+    display: block;
+    height: 4px;
+    -webkit-appearance: none;
+    -webkit-border-radius: 8px;
+    margin-top: 20px;
+    margin-left: 50%;
+    margin-bottom: 20px;
+    cursor: -webkit-grab;
+    outline: 0;
+}
+
+input.radioco-volume {
+  position: absolute;
+  top: 3rem;
+  /* left: 50%; */
+  transform: translateX(-50%);
+}
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    
+    background-color: #bbdfc5 !important;
+    width: 15px;
+    height: 15px;
+    border-radius: 10px;
+    background: #ffffff;
+    /* -webkit-transition: box-shadow 0.2s; */
+
+}
+
+.radioco-information input[type=range]::-webkit-slider-thumb:hover {
+    box-shadow: #fff 1px 1px 20px;
+}
+
+.radioco-information input[type=range]:active,
+.information input[type=range]:focus {
+    outline: 0;
 }
 
 .logo img {
