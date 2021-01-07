@@ -31,6 +31,7 @@
                 <a target="_blank" href="https://babylonradio.com/radio-presenters/after-eight-show/">Previous Shows</a>    
                 <a target="_blank" href="https://babylonradio.com/radio-presenters/radio-schedule/">View Full Schedule</a>    
                 </div>  
+                <p id="radio-co-song-title" style="display: none;"><script src="https://embed.radio.co/embed/s87a2a134a/song.js"></script>
                 <div class="radio-content">
                     <div class="radioplayer" data-src="https://s2.radio.co/s87a2a134a/listen" data-autoplay="true"
                     data-playbutton="true" data-elapsedtime="true" data-nowplaying="false" data-showplayer="false"
@@ -40,22 +41,98 @@
                 </div>
         </div>
     </section>
-    
-    
-</body>
+    <!-- Include the libraries -->
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="https://public.radio.co/playerapi/jquery.radiocoplayer.min.js"></script>
+  <script>
+  	//initialise the plugin with the element
+  	$('.radioplayer').radiocoPlayer();
+      let play = document.getElementById("play");
 
-<!-- Include the libraries -->
-<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-<script src="https://public.radio.co/playerapi/jquery.radiocoplayer.min.js"></script>
-<script>
-    //initialise the plugin with the element
-    $('.radioplayer').radiocoPlayer();
-    let play = document.getElementById("play");
-    let presenter = document.querySelector(".presenter-img");
-    play.addEventListener("click", function () {
-        // radioplayer.setAttribute("data-autoplay", 'false');
-        alert('hi')
-    });
-</script>
+  </script>
+  <script type="text/javascript">
+  	setInterval(function () {
+  		var str = "";
+          var songTitle = document.getElementById("radio-co-song-title").textContent;
+          
+		  var presenterName = document.getElementById('presenter-name');
+		  let showName = document.querySelector(".show-name");
+  		var splitSongTitle = songTitle.split("-");
+          var checkSongTitle = str.concat(splitSongTitle[0]);
+          console.log(checkSongTitle);
+		  var showNameString = splitSongTitle[1];
+		
+		// console.log(showName);
+  		// alert(realsong);
+  		if (checkSongTitle == "Gary Meade ") {
+			  document.getElementById("listen-live").style.backgroundImage = "url('https://babylonradio.com/wp-content/uploads/2020/12/player_Through_The_Years_290x180.jpg')";
+			  document.body.style.backgroundImage = "url('https://babylonradio.com/wp-content/uploads/2020/12/player_Through_The_Years_290x180.jpg')";
+					  	 	}
+					  	 	
+					  	 	// If the presenter is "Mark Hanratty ". this image will set ---- IF THERE IS NEW PRESENTER, ADD ANOTHER else if BLOCK
+					  	 	
+							else if (checkSongTitle == "Mark Hanratty ") {
+								document.getElementById("listen-live").style.backgroundImage = "url('https://babylonradio.com/wp-content/uploads/2020/12/player_SONGWRITER_SPOTLIGHT_290x180-1.jpg')";
+								document.body.style.backgroundImage = "linear-gradient(rgba(0, 0, 0, 0.80), rgba(222, 222, 222, 0.6)),url('https://babylonradio.com/wp-content/uploads/2020/12/player_SONGWRITER_SPOTLIGHT_290x180-1.jpg')";
+					  	 	}
+					  	 	else if (checkSongTitle == "Cecilia Ramos ") {
+								   document.getElementById("listen-live").style.backgroundImage = "url('https://babylonradio.com/wp-content/uploads/2020/12/cecilia_ramos_player_no_button.jpg')";
+								   document.body.style.backgroundImage = "linear-gradient(rgba(0, 0, 0, 0.80), rgba(222, 222, 222, 0.6)),url('https://babylonradio.com/wp-content/uploads/2020/12/cecilia_ramos_player_no_button.jpg')";
+					  	 	}
+					  	 	else if (checkSongTitle == "Thomas McCarthy ") {
+								   document.getElementById("listen-live").style.backgroundImage = "url('https://babylonradio.com/wp-content/uploads/2020/12/player_FREEDOM_AT_FIVE_290x180.jpg')";
+								   document.body.style.backgroundImage = "linear-gradient(rgba(0, 0, 0, 0.80), rgba(222, 222, 222, 0.6)),url('https://babylonradio.com/wp-content/uploads/2020/12/player_FREEDOM_AT_FIVE_290x180.jpg')";
+					  	 	}
+					  	 	else if (checkSongTitle == "Colm Slattery ") {
+								   document.getElementById("listen-live").style.backgroundImage = "url('https://babylonradio.com/wp-content/uploads/2020/12/player_FRUIT_SONIC_290x180.jpg')";
+								   document.body.style.backgroundImage = "linear-gradient(rgba(0, 0, 0, 0.80), rgba(222, 222, 222, 0.6)),url('https://babylonradio.com/wp-content/uploads/2020/12/player_FRUIT_SONIC_290x180.jpg')";
+					  	 	}
+					  	 	else if(checkSongTitle == "Oisin Coyne "){
+								   document.getElementById("listen-live").style.backgroundImage = "url('https://babylonradio.com/wp-content/uploads/2020/12/player_ROAR_THE_SCORE_290x180.jpg')";
+								   document.body.style.backgroundImage = "linear-gradient(rgba(0, 0, 0, 0.80), rgba(222, 222, 222, 0.6)),url('https://babylonradio.com/wp-content/uploads/2020/12/player_ROAR_THE_SCORE_290x180.jpg')";
+							}
+					  	 	else if(checkSongTitle == "Ilse Mannessen "){
+								   document.getElementById("listen-live").style.backgroundImage = "url('https://babylonradio.com/wp-content/uploads/2020/12/player_MOON_HOUR_290x180.jpg')";
+								   document.body.style.backgroundImage = "linear-gradient(rgba(0, 0, 0, 0.80), rgba(222, 222, 222, 0.6)),url('https://babylonradio.com/wp-content/uploads/2020/12/player_MOON_HOUR_290x180.jpg')";
+					  	 	}
+					  	    else if((checkSongTitle == "Deuce " ) || (checkSongTitle == "Matt Barker ")){
+								  document.getElementById("listen-live").style.backgroundImage = "url('https://babylonradio.com/wp-content/uploads/2020/12/deuce.jpg')";
+								  document.body.style.backgroundImage = "linear-gradient(rgba(0, 0, 0, 0.80), rgba(222, 222, 222, 0.6)),url('https://babylonradio.com/wp-content/uploads/2020/12/deuce.jpg')";
+					  	 	}
+					  	    else if(checkSongTitle == "Chloe Mc Donnell "){
+								  document.getElementById("listen-live").style.backgroundImage = "url('https://babylonradio.com/wp-content/uploads/2020/12/player_FEEL_GOOD_WEEKEND_290x180.jpg')";
+								  document.body.style.backgroundImage = "linear-gradient(rgba(0, 0, 0, 0.80), rgba(222, 222, 222, 0.6)),url('https://babylonradio.com/wp-content/uploads/2020/12/player_FEEL_GOOD_WEEKEND_290x180.jpg')";
+					  	 	}
+							else if(checkSongTitle == "Royce Laroca "){
+								document.getElementById("listen-live").style.backgroundImage = "url('https://babylonradio.com/wp-content/uploads/2020/12/player_REAL_TALK_SHOW_290x180.jpg')";
+								document.body.style.backgroundImage = "linear-gradient(rgba(0, 0, 0, 0.80), rgba(222, 222, 222, 0.6)),url('https://babylonradio.com/wp-content/uploads/2020/12/player_REAL_TALK_SHOW_290x180.jpg')";
+					  	 	}
+							else if(checkSongTitle == "Sophie Stapleton "){
+								document.getElementById("listen-live").style.backgroundImage = "url('https://babylonradio.com/wp-content/uploads/2020/12/player_HOUR_OF_EIRE_290x180.jpg')";
+								document.body.style.backgroundImage = "linear-gradient(rgba(0, 0, 0, 0.80), rgba(222, 222, 222, 0.6)), url('https://babylonradio.com/wp-content/uploads/2020/12/player_HOUR_OF_EIRE_290x180.jpg')";
+					  	 	}
+					  	 	else if(checkSongTitle == "Peter Coleman "){
+								   document.getElementById("listen-live").style.backgroundImage = "url('https://babylonradio.com/wp-content/uploads/2020/12/player_AFTER_EIGHT_SHOW_290x180-1.jpg')";
+								   document.body.style.backgroundImage = "linear-gradient(rgba(90,146,106,0.8), rgba(90,146,106,0.8)),url('https://babylonradio.com/wp-content/uploads/2020/12/player_AFTER_EIGHT_SHOW_290x180-1.jpg')";
+					  	 	}
+					  	 	else if(checkSongTitle == "Sukrity Sharma "){
+								  document.getElementById("listen-live").style.backgroundImage = "url('https://babylonradio.com/wp-content/uploads/2020/12/player_ROCK_NIGHTS_290x180.jpg')";
+								  document.body.style.backgroundImage = "linear-gradient(rgba(0, 0, 0, 0.80), rgba(222, 222, 222, 0.6)),url('https://babylonradio.com/wp-content/uploads/2020/12/player_ROCK_NIGHTS_290x180.jpg')";
+					  	 	}
+					  	 	else if(checkSongTitle == "Jerline Gandhi "){
+								  document.getElementById("listen-live").style.backgroundImage = "url('https://babylonradio.com/wp-content/uploads/2020/12/player_REFLECTIONS_OF_A_BUBBLE_290x180.jpg')";
+								  document.body.style.backgroundImage = "linear-gradient(rgba(0, 0, 0, 0.80), rgba(222, 222, 222, 0.6)), url('https://babylonradio.com/wp-content/uploads/2020/12/player_REFLECTIONS_OF_A_BUBBLE_290x180.jpg')";
+					  	 	}
+					  	 	else if(checkSongTitle == "Jonathan Maby "){
+								  document.getElementById("listen-live").style.backgroundImage = "url('https://babylonradio.com/wp-content/uploads/2020/12/player_DJ_JON_MABY_290x180.jpg')";
+								  document.body.style.backgroundImage = "linear-gradient(rgba(0, 0, 0, 0.80), rgba(222, 222, 222, 0.6)), url('https://babylonradio.com/wp-content/uploads/2020/12/player_DJ_JON_MABY_290x180.jpg')";
+					  	 	}
+							 else{document.getElementById("listen-live").style.backgroundImage = "url('https://babylonradio.com/wp-content/uploads/2020/11/Pure_Vibes_On_Air_presenters_player_home.jpg')";
+							 document.body.style.backgroundImage = "linear-gradient(rgba(0, 0, 0, 0.80), rgba(222, 222, 222, 0.6)), url('https://babylonradio.com/wp-content/uploads/2020/11/Pure_Vibes_On_Air_presenters_player_home.jpg')";
+							}
+
+
+  	}, 2000);
+  </script>
 </body>
 </html>

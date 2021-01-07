@@ -9,6 +9,9 @@ body {
 	overflow: hidden !important;
     padding: 1rem;
     background-color: black;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .player-container {
@@ -35,7 +38,7 @@ body {
 }
 
 .presenter-content{
-    padding: 2rem;
+    padding: 1rem;
     position: relative;
     text-align: center;
 }
@@ -61,9 +64,9 @@ body {
     position: relative;
     border-top-left-radius:60px ;
     border-top-right-radius:60px ;
-    webkit-box-shadow: 10px 10px 186px 25px rgba(0,0,0,0.75);
--moz-box-shadow: 10px 10px 186px 25px rgba(0,0,0,0.75);
-box-shadow: 10px 10px 186px 25px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 10px 186px 25px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 186px 25px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 186px 25px rgba(0,0,0,0.75);
 }
 
 [class*="fontawesome-"]:before {
@@ -97,11 +100,10 @@ content: "\f04b";
     width: 6rem;
     height: 6rem;
     position: absolute;
-    left: 51%;
+    left: 50%;
     top: 45%;
     transform: translateX(-50%);
     text-align: center;
-    /* position: relative; */
     z-index: 2;
     font-size: 50px;
     -webkit-box-shadow: 10px 57px 184px 22px rgba(0,0,0,0.75);
@@ -115,7 +117,6 @@ content: "\f04b";
 
 .radioco-playButton-playing {
     font-family: "controls";
-    /* position: absolute; */
    margin-left: 11px;
    margin-top: 3px;
 }
@@ -123,8 +124,6 @@ content: "\f04b";
 
 .radioco-playButton-paused {
     font-family: "controls";
-    /* position: absolute; */
-    
    margin-top: 5px;
 }
 
@@ -148,7 +147,6 @@ input[type="range"] {
     display: block;
     height: 4px;
     -webkit-appearance: none;
-    -webkit-border-radius: 8px;
     margin-top: 20px;
     margin-left: 50%;
     margin-bottom: 20px;
@@ -159,20 +157,16 @@ input[type="range"] {
 input.radioco-volume {
   position: absolute;
   top: 3rem;
-  /* left: 50%; */
   transform: translateX(-50%);
 }
 input[type=range]::-webkit-slider-thumb {
     -webkit-appearance: none;
     border: none;
-    
     background-color: #bbdfc5 !important;
     width: 15px;
     height: 15px;
     border-radius: 10px;
     background: #ffffff;
-    /* -webkit-transition: box-shadow 0.2s; */
-
 }
 
 .radioco-information input[type=range]::-webkit-slider-thumb:hover {
