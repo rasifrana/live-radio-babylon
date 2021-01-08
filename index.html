@@ -27,9 +27,12 @@
                 <!-- Presenter Description -->
                 <p class="presenter-description">
                   Hi! I am Ilse and I moved from the Netherlands to Ireland a while ago. In my radio show you will listen to folk music from various countries, because music is a universal language!
-                </p>  
-                <a target="_blank" href="https://babylonradio.com/radio-presenters/after-eight-show/">Previous Shows</a>    
-                <a target="_blank" href="https://babylonradio.com/radio-presenters/radio-schedule/">View Full Schedule</a>    
+				</p>  
+				<div class="btns">
+					<a class="btn btn-show" target="_blank" href="https://babylonradio.com/radio-presenters/after-eight-show/">Previous Shows</a>    
+                <a class="btn btn-time" target="_blank" href="https://babylonradio.com/radio-presenters/radio-schedule/">View Full Schedule</a>    
+				</div>
+                
                 </div>  
                 <p id="radio-co-song-title" style="display: none;"><script src="https://embed.radio.co/embed/s87a2a134a/song.js"></script>
                 <div class="radio-content">
@@ -39,7 +42,7 @@
                 </div>
 
                 </div>
-        </div>
+      
     </section>
     <!-- Include the libraries -->
   <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
@@ -54,7 +57,7 @@
   	setInterval(function () {
   		var str = "";
           var songTitle = document.getElementById("radio-co-song-title").textContent;
-          
+          let presenterDescription = document.querySelector('.presenter-description');
 		  var presenterName = document.getElementById('presenter-name');
 		  let showName = document.querySelector(".show-name");
   		var splitSongTitle = songTitle.split("-");
@@ -114,7 +117,8 @@
 					  	 	else if(checkSongTitle == "Peter Coleman "){
 								   document.getElementById("listen-live").style.backgroundImage = "url('https://babylonradio.com/wp-content/uploads/2020/12/player_AFTER_EIGHT_SHOW_290x180-1.jpg')";
 								   document.body.style.backgroundImage = "linear-gradient(rgba(90,146,106,0.8), rgba(90,146,106,0.8)),url('https://babylonradio.com/wp-content/uploads/2020/12/player_AFTER_EIGHT_SHOW_290x180-1.jpg')";
-					  	 	}
+                                    presenterDescription.textContent = 'The eclectic mix of music that you will hear on The After Eight Show reflects Peter’s own tastes. Typically, in a single show, you’ll hear some alternative indie, electro pop, rnb, jazz, blues, electronic, world and acoustic folk-inspired tracks.';
+                                }
 					  	 	else if(checkSongTitle == "Sukrity Sharma "){
 								  document.getElementById("listen-live").style.backgroundImage = "url('https://babylonradio.com/wp-content/uploads/2020/12/player_ROCK_NIGHTS_290x180.jpg')";
 								  document.body.style.backgroundImage = "linear-gradient(rgba(0, 0, 0, 0.80), rgba(222, 222, 222, 0.6)),url('https://babylonradio.com/wp-content/uploads/2020/12/player_ROCK_NIGHTS_290x180.jpg')";
