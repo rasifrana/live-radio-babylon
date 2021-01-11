@@ -20,7 +20,7 @@ body {
 
 .player-container {
     max-width: 420px;
-    height: 670px;
+    height: 660px;
     background-color: #3E9403;
     border-radius: 7px;
     margin:0;
@@ -206,3 +206,18 @@ input[type=range]::-webkit-slider-thumb {
 
 
 /* designed color   #77c08b */
+
+@media only screen and (max-width: 400px) {
+    body {
+      padding: 0;
+    }
+    .player-container {
+        width: 100%;
+        height: 100vh;
+    }
+
+    .logo {
+        display: none;
+    }
+
+  }
