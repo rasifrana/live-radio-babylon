@@ -60,16 +60,20 @@
           let presenterDescription = document.querySelector('.presenter-description');
 		  var presenterName = document.getElementById('presenter-name');
 		  let showName = document.querySelector(".show-name");
+		  let previousShowLink = document.querySelector('.btn-show');
   		var splitSongTitle = songTitle.split("-");
           var checkSongTitle = str.concat(splitSongTitle[0]);
           console.log(checkSongTitle);
 		  var showNameString = splitSongTitle[1];
+
 		
 		// console.log(showName);
   		// alert(realsong);
   		if (checkSongTitle == "Gary Meade ") {
 			  document.getElementById("listen-live").style.backgroundImage = "url('https://babylonradio.com/wp-content/uploads/2020/12/player_Through_The_Years_290x180.jpg')";
 			  document.body.style.backgroundImage = "url('https://babylonradio.com/wp-content/uploads/2020/12/player_Through_The_Years_290x180.jpg')";
+			  presenterDescription.textContent = 'The 2-hour show will pick a year and play the top songs of that year and include tops news stories and sports stories of that year for the first hour. The second will be a mixture of music from each era including an interview with an unsigned artist.';
+			  previousShowLink.href = 'https://babylonradio.com/radio-presenters/through-the-years/';
 					  	 	}
 					  	 	
 					  	 	// If the presenter is "Mark Hanratty ". this image will set ---- IF THERE IS NEW PRESENTER, ADD ANOTHER else if BLOCK
@@ -77,61 +81,85 @@
 							else if (checkSongTitle == "Mark Hanratty ") {
 								document.getElementById("listen-live").style.backgroundImage = "url('https://babylonradio.com/wp-content/uploads/2020/12/player_SONGWRITER_SPOTLIGHT_290x180-1.jpg')";
 								document.body.style.backgroundImage = "linear-gradient(rgba(90,146,106,0.8), rgba(90,146,106,0.8)),url('https://babylonradio.com/wp-content/uploads/2020/12/player_SONGWRITER_SPOTLIGHT_290x180-1.jpg')";
-								presenterDescription.textContent = "";
+								presenterDescription.textContent = "Mark Hanratty has very few skills in life, but one area he can't be beaten in is his knowledge of pop trivia! Each week Mark will be focusing on a different songwriter from the music world, and playing two hours of music they've written.";
+								previousShowLink.href = 'https://babylonradio.com/radio-presenters/songwriter-spotlight/';
 					  	 	}
 					  	 	else if (checkSongTitle == "Cecilia Ramos ") {
 								   document.getElementById("listen-live").style.backgroundImage = "url('https://babylonradio.com/wp-content/uploads/2020/12/cecilia_ramos_player_no_button.jpg')";
 								   document.body.style.backgroundImage = "linear-gradient(rgba(90,146,106,0.8), rgba(90,146,106,0.8)),url('https://babylonradio.com/wp-content/uploads/2020/12/cecilia_ramos_player_no_button.jpg')";
-								   presenterDescription.textContent = "";
+								   presenterDescription.textContent = "Hi there, I’m Cecilia Ramos, originally from Ecuador. I’ve lived in Manchester for a number of years, where I produce and present a weekly music, news, current events and chat radio show for the Spanish-Speaking community.";
+								   previousShowLink.href = 'https://babylonradio.com/radio-presenters/somos/';
 					  	 	}
 					  	 	else if (checkSongTitle == "Thomas McCarthy ") {
 								   document.getElementById("listen-live").style.backgroundImage = "url('https://babylonradio.com/wp-content/uploads/2020/12/player_FREEDOM_AT_FIVE_290x180.jpg')";
 								   document.body.style.backgroundImage = "linear-gradient(rgba(90,146,106,0.8), rgba(90,146,106,0.8)),url('https://babylonradio.com/wp-content/uploads/2020/12/player_FREEDOM_AT_FIVE_290x180.jpg')";
+								   presenterDescription.textContent = 'A 25 year old Irish lad working on his farm below in west cork. Lover of travel/food/fashion. Big into music and like to entertain. My show is a nice mix of music, chat some fun stories and we touch on internal tourism in Ireland.';
+								   previousShowLink.href = 'https://babylonradio.com/radio-presenters/freedom-at-five/';
 					  	 	}
 					  	 	else if (checkSongTitle == "Colm Slattery ") {
 								   document.getElementById("listen-live").style.backgroundImage = "url('https://babylonradio.com/wp-content/uploads/2020/12/player_FRUIT_SONIC_290x180.jpg')";
 								   document.body.style.backgroundImage = "linear-gradient(rgba(90,146,106,0.8), rgba(90,146,106,0.8)),url('https://babylonradio.com/wp-content/uploads/2020/12/player_FRUIT_SONIC_290x180.jpg')";
-					  	 	}
+								   presenterDescription.textContent = 'Sound engineer, graphic designer, and yes man. Colm has been involved in the Dublin music scene since his early teens, playing in bands, and being involved with numerous festivals, events, and conferences around the country as an organizer and sound engineer.'
+								   previousShowLink.href = 'https://babylonradio.com/radio-presenters/fruit-sonic/';
+								}
 					  	 	else if(checkSongTitle == "Oisin Coyne "){
 								   document.getElementById("listen-live").style.backgroundImage = "url('https://babylonradio.com/wp-content/uploads/2020/12/player_ROAR_THE_SCORE_290x180.jpg')";
 								   document.body.style.backgroundImage = "linear-gradient(rgba(90,146,106,0.8), rgba(90,146,106,0.8)),url('https://babylonradio.com/wp-content/uploads/2020/12/player_ROAR_THE_SCORE_290x180.jpg')";
+								   presenterDescription.textContent = "My name is Oisin Coyne, I am an 18 year old student from Kildare. I am a passionate sports broadcaster specialising in the world of football. The latest football drama can be heard on my radio show Roar The Score every Friday at 7pm on Babylon.";
+								   previousShowLink.href = 'https://babylonradio.com/radio-presenters/roar-the-score/';
 							}
 					  	 	else if(checkSongTitle == "Ilse Mannessen "){
 								   document.getElementById("listen-live").style.backgroundImage = "url('https://babylonradio.com/wp-content/uploads/2020/12/player_MOON_HOUR_290x180.jpg')";
 								   document.body.style.backgroundImage = "linear-gradient(rgba(90,146,106,0.8), rgba(90,146,106,0.8)),url('https://babylonradio.com/wp-content/uploads/2020/12/player_MOON_HOUR_290x180.jpg')";
+								   presenterDescription.textContent = 'Hi! I am Ilse and I moved from the Netherlands to Ireland a while ago. In my radio show you will listen to folk music from various countries, because music is a universal language!';
+								   previousShowLink.href = 'https://babylonradio.com/radio-presenters/moon-hour/';
 					  	 	}
 					  	    else if((checkSongTitle == "Deuce " ) || (checkSongTitle == "Matt Barker ")){
 								  document.getElementById("listen-live").style.backgroundImage = "url('https://babylonradio.com/wp-content/uploads/2020/12/deuce.jpg')";
 								  document.body.style.backgroundImage = "linear-gradient(rgba(90,146,106,0.8), rgba(90,146,106,0.8)),url('https://babylonradio.com/wp-content/uploads/2020/12/deuce.jpg')";
+								  presenterDescription.textContent = 'Bringing you the very best in new music from around the world. The Deuce Show is a one-hour radio show presented by Matt Barker and features bands and artists promoted by Deuce. The show is currently being broadcast on over 50 radio stations worldwide.';
+								  previousShowLink.href = 'https://babylonradio.com/radio-presenters/deuce/';
 					  	 	}
 					  	    else if(checkSongTitle == "Chloe Mc Donnell "){
 								  document.getElementById("listen-live").style.backgroundImage = "url('https://babylonradio.com/wp-content/uploads/2020/12/player_FEEL_GOOD_WEEKEND_290x180.jpg')";
 								  document.body.style.backgroundImage = "linear-gradient(rgba(90,146,106,0.8), rgba(90,146,106,0.8)),url('https://babylonradio.com/wp-content/uploads/2020/12/player_FEEL_GOOD_WEEKEND_290x180.jpg')";
+								  presenterDescription.textContent = "Let Babylon Radio take you on a journey of nice melodies and harmony to complement the weekend while you talk with Chloe about all the good news from the past week, and what's going on in the world.";
+								  previousShowLink.href = 'https://babylonradio.com/radio-presenters/feel-good-weekend/';
 					  	 	}
 							else if(checkSongTitle == "Royce Laroca "){
 								document.getElementById("listen-live").style.backgroundImage = "url('https://babylonradio.com/wp-content/uploads/2020/12/player_REAL_TALK_SHOW_290x180.jpg')";
 								document.body.style.backgroundImage = "linear-gradient(rgba(90,146,106,0.8), rgba(90,146,106,0.8)),url('https://babylonradio.com/wp-content/uploads/2020/12/player_REAL_TALK_SHOW_290x180.jpg')";
+								previousShowLink.href = '';
 					  	 	}
 							else if(checkSongTitle == "Sophie Stapleton "){
 								document.getElementById("listen-live").style.backgroundImage = "url('https://babylonradio.com/wp-content/uploads/2020/12/player_HOUR_OF_EIRE_290x180.jpg')";
 								document.body.style.backgroundImage = "linear-gradient(rgba(90,146,106,0.8), rgba(90,146,106,0.8)), url('https://babylonradio.com/wp-content/uploads/2020/12/player_HOUR_OF_EIRE_290x180.jpg')";
+								presenterDescription.textContent = 'Sophie Stapleton is a recent Multimedia graduate from Dublin City University. This is where she learned about audio production and enjoyed getting involved with various societies. Her radio show aims to help people get to know.';
+								previousShowLink.href = 'https://babylonradio.com/radio-presenters/hour-of-eire/';
 					  	 	}
 					  	 	else if(checkSongTitle == "Peter Coleman "){
 								   document.getElementById("listen-live").style.backgroundImage = "url('https://babylonradio.com/wp-content/uploads/2020/12/player_AFTER_EIGHT_SHOW_290x180-1.jpg')";
 								   document.body.style.backgroundImage = "linear-gradient(rgba(90,146,106,0.8), rgba(90,146,106,0.8))l('https://babylonradio.com/wp-content/uploads/2020/12/player_AFTER_EIGHT_SHOW_290x180-1.jpg')";
-                                    presenterDescription.textContent = 'The eclectic mix of music that you will hear on The After Eight Show reflects Peter’s own tastes. Typically, in a single show, you’ll hear some alternative indie, electro pop, rnb, jazz, blues, electronic, world and acoustic folk-inspired tracks.';
+									presenterDescription.textContent = 'The eclectic mix of music that you will hear on The After Eight Show reflects Peter’s own tastes. Typically, in a single show, you’ll hear some alternative indie, electro pop, rnb, jazz, blues, electronic, world and acoustic folk-inspired tracks.';
+									previousShowLink.href = 'https://babylonradio.com/radio-presenters/after-eight-show/';
                                 }
 					  	 	else if(checkSongTitle == "Sukrity Sharma "){
 								  document.getElementById("listen-live").style.backgroundImage = "url('https://babylonradio.com/wp-content/uploads/2020/12/player_ROCK_NIGHTS_290x180.jpg')";
 								  document.body.style.backgroundImage = "linear-gradient(rgba(90,146,106,0.8), rgba(90,146,106,0.8)),url('https://babylonradio.com/wp-content/uploads/2020/12/player_ROCK_NIGHTS_290x180.jpg')";
+								  presenterDescription.textContent = 'This is a musical radio program of Rock music where I am going to play rock music of every genre of Rock each week on the program. There are different sections within the radio program including Introduction to the show and of myself and news regarding the new release'
+								  previousShowLink.href = 'https://babylonradio.com/radio-presenters/rock-nights/';
 					  	 	}
 					  	 	else if(checkSongTitle == "Jerline Gandhi "){
 								  document.getElementById("listen-live").style.backgroundImage = "url('https://babylonradio.com/wp-content/uploads/2020/12/player_REFLECTIONS_OF_A_BUBBLE_290x180.jpg')";
 								  document.body.style.backgroundImage = "linear-gradient(rgba(90,146,106,0.8), rgba(90,146,106,0.8)), url('https://babylonradio.com/wp-content/uploads/2020/12/player_REFLECTIONS_OF_A_BUBBLE_290x180.jpg')";
+								  presenterDescription.textContent = "Jerline Gandhi is an artist and writer who is process-driven. Being a perfectionist with a keen curiosity, helps her bring ideas to life. She is inspired by music, human emotion, and conscience. She experiments with different mediums and is flexible.";
+								  previousShowLink.href = 'https://babylonradio.com/radio-presenters/mantra/';
 					  	 	}
 					  	 	else if(checkSongTitle == "Jonathan Maby "){
 								  document.getElementById("listen-live").style.backgroundImage = "url('https://babylonradio.com/wp-content/uploads/2020/12/player_DJ_JON_MABY_290x180.jpg')";
 								  document.body.style.backgroundImage = "linear-gradient(rgba(90,146,106,0.8), rgba(90,146,106,0.8)), url('https://babylonradio.com/wp-content/uploads/2020/12/player_DJ_JON_MABY_290x180.jpg')";
+								  presenterDescription.textContent = 'I started DJing late in life 1996 at the age of 26 but was always into music from an early age. In 1998 I started playing out in clubs as warm up DJ for Adam Presdee in my local town Coventry. In the time I worked with Adam Presdee in various clubs in the west midlands.';
+								  previousShowLink.href = 'https://babylonradio.com/radio-presenters/dj-jon-maby/';
 					  	 	}
 							 else{document.getElementById("listen-live").style.backgroundImage = "url('https://babylonradio.com/wp-content/uploads/2020/11/Pure_Vibes_On_Air_presenters_player_home.jpg')";
 							 document.body.style.backgroundImage = "linear-gradient(rgba(90,146,106,0.8), rgba(90,146,106,0.8)), url('https://babylonradio.com/wp-content/uploads/2020/11/Pure_Vibes_On_Air_presenters_player_home.jpg')";
