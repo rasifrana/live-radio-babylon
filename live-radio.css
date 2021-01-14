@@ -198,7 +198,7 @@ input[type=range]::-webkit-slider-thumb {
     display: flex;
     justify-content: space-between;
     width: 80%;
-    margin: 3rem auto 0.8rem auto;
+    margin: 3.5rem auto 1.2rem auto;
 }
 
 
