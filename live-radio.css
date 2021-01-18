@@ -291,13 +291,14 @@ transition: all 0.3s ease-in-out;
         .social-icons {
             background-color:#fff;
             overflow: hidden;
-            border-radius: 15px;
+    
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
          padding-top: 3px;
             width: 65%;
-            margin: -34px auto 0 auto;
+            margin: -20px auto 0 auto;
             /* transform: translateX(120%); */
             transition: 0.5s all ease-in-out;
-            
         }
         
 
